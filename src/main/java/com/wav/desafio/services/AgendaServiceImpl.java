@@ -1,5 +1,6 @@
 package com.wav.desafio.services;
 
+import com.wav.desafio.entities.AgendaEntity;
 import com.wav.desafio.exceptions.NotFoundException;
 import com.wav.desafio.mappers.AgendaMapper;
 import com.wav.desafio.model.AgendaDTO;
@@ -24,14 +25,20 @@ public class AgendaServiceImpl implements AgendaService
     @Override
     public AgendaDTO create( AgendaDTO agendaDTO )
     {
+        if ( agendaDTO.getName() == null || agendaDTO.getName().isEmpty() )
+        {
+            throw new RuntimeException( "O campo título é obrigatório." );
+        }
+
         return agendaMapper.agendaToAgendaDTO( agendaRepository.save( agendaMapper.agendaDTOToAgendaEntity( agendaDTO ) ));
     }
 
     @Override
     public AgendaDTO getById( Integer id )
     {
-//        return Optional.ofNullable( agendaMapper.agendaToAgendaDTO( agendaRepository.findById( id ).orElse( null ) ) ).orElseThrow( new NotFoundException( "Agenda not found" ) );
-        return Optional.ofNullable( agendaMapper.agendaToAgendaDTO( agendaRepository.findById( id ).orElse( null ) ) ).orElseThrow();
+        return Optional.ofNullable( agendaMapper.agendaToAgendaDTO( agendaRepository.findById( id )
+                                                .orElse( null ) ) )
+                                    .orElseThrow( () -> new RuntimeException( "A pauta em questão não foi encontrada." ) );
     }
 
     @Override
@@ -43,6 +50,15 @@ public class AgendaServiceImpl implements AgendaService
     @Override
     public VoteResultDTO countVotes( Integer id )
     {
-        return null;
+        AgendaEntity agenda = agendaRepository.findById( id ).orElseThrow( () -> new RuntimeException( "A pauta em questão não foi encontrada." ) );
+
+        VoteResultDTO result = agendaRepository.countVotes( id );
+
+        return VoteResultDTO.builder()
+                                .name( agenda.getName() )
+                                .description( agenda.getDescription() )
+                                .proVotes( result.getProVotes() )
+                                .againstVotes( result.getAgainstVotes() )
+                                .result( result.getResult() ).build();
     }
 }
