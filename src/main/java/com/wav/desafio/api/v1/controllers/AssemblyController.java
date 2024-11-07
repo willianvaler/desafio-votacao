@@ -19,7 +19,7 @@ public class AssemblyController implements AssemblyControllerAPI
     {
         try
         {
-            return ResponseEntity.status( HttpStatus.CREATED).body( service.create( session ) );
+            return ResponseEntity.status( HttpStatus.CREATED).body( service.create( assembly ) );
         }
 
         catch ( Exception e )
@@ -54,6 +54,5 @@ public class AssemblyController implements AssemblyControllerAPI
         {
             return ResponseEntity.badRequest().body( e.getMessage() );
         }
-    }
     }
 }
