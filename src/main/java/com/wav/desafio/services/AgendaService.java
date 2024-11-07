@@ -9,9 +9,6 @@ public interface AgendaService
 {
     public AgendaDTO create( AgendaDTO agendaDTO );
 
-//    public AgendaDTO update( AgendaDTO agendaDTO );
-//    public AgendaDTO delete( AgendaDTO agendaDTO );
-
     public AgendaDTO getById( Integer id );
 
     public List<AgendaDTO> getAll();
