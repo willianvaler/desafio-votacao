@@ -8,10 +8,7 @@ import java.util.List;
 public interface AgendaService
 {
     public AgendaDTO create( AgendaDTO agendaDTO );
-
     public AgendaDTO getById( Integer id );
-
     public List<AgendaDTO> getAll();
-
-    public VoteResultDTO countAgendaVotes( Integer id);
+    public VoteResultDTO countVotes( Integer id);
 }

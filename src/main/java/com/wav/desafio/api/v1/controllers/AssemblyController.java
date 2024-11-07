@@ -33,7 +33,7 @@ public class AssemblyController implements AssemblyControllerAPI
     {
         try
         {
-            return ResponseEntity.ok().body( service.getAssembly( id ) );
+            return ResponseEntity.ok().body( service.getById( id ) );
         }
 
         catch ( Exception e )

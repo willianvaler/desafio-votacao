@@ -33,7 +33,7 @@ public class SessionController implements SessionControllerAPI
     {
         try
         {
-            return ResponseEntity.ok().body( sessionService.getSession( id ) );
+            return ResponseEntity.ok().body( sessionService.getById( id ) );
         }
 
         catch ( Exception e )
@@ -47,7 +47,7 @@ public class SessionController implements SessionControllerAPI
     {
         try
         {
-            return ResponseEntity.ok().body( sessionService.getAllSessions() );
+            return ResponseEntity.ok().body( sessionService.getAll() );
         }
 
         catch ( Exception e )

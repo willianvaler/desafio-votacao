@@ -8,7 +8,7 @@ public interface SessionService
 {
     public SessionDTO create( SessionDTO session );
 
-    public SessionDTO getSession( int id );
+    public SessionDTO getById( int id );
 
-    public List<SessionDTO> getAllSessions();
+    public List<SessionDTO> getAll();
 }

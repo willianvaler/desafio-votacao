@@ -26,13 +26,13 @@ public class SessionServiceImpl implements SessionService
     }
 
     @Override
-    public SessionDTO getSession( int id )
+    public SessionDTO getById( int id )
     {
         return Optional.ofNullable( sessionMapper.sessionToSessionDTO( sessionRepository.findById( id ).orElse( null ) ) ).orElseThrow();
     }
 
     @Override
-    public List<SessionDTO> getAllSessions()
+    public List<SessionDTO> getAll()
     {
         return sessionRepository.findAll().stream().map( sessionMapper::sessionToSessionDTO ).collect( Collectors.toList());
     }

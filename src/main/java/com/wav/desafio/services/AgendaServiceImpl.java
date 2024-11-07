@@ -41,7 +41,7 @@ public class AgendaServiceImpl implements AgendaService
     }
 
     @Override
-    public VoteResultDTO countAgendaVotes( Integer id )
+    public VoteResultDTO countVotes( Integer id )
     {
         return null;
     }

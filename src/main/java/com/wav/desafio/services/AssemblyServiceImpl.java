@@ -27,7 +27,7 @@ public class AssemblyServiceImpl implements AssemblyService
     }
 
     @Override
-    public AssemblyDTO getAssembly( int id )
+    public AssemblyDTO getById( int id )
     {
         return Optional.ofNullable( assemblyMapper.assemblyToAssemblyDTO( assemblyRepository.findById( id ).orElse( null ) ) ).orElseThrow();
     }

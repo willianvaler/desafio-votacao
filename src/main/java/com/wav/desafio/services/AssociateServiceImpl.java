@@ -26,13 +26,13 @@ public class AssociateServiceImpl implements AssociateService
     }
 
     @Override
-    public AssociateDTO getAssociate( Integer id )
+    public AssociateDTO getById( Integer id )
     {
         return Optional.ofNullable( associateMapper.associateToAssociateDTO( associateRepository.findById( id ).orElse( null ) ) ).orElseThrow();
     }
 
     @Override
-    public List<AssociateDTO> getAssociates()
+    public List<AssociateDTO> getAll()
     {
         return associateRepository.findAll().stream().map( associateMapper::associateToAssociateDTO ).collect( Collectors.toList());
     }

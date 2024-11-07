@@ -8,7 +8,7 @@ public interface AssociateService
 {
     public AssociateDTO create( AssociateDTO associateDTO );
 
-    public AssociateDTO getAssociate( Integer id );
+    public AssociateDTO getById( Integer id );
 
-    public List<AssociateDTO> getAssociates();
+    public List<AssociateDTO> getAll();
 }

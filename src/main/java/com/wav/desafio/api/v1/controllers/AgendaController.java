@@ -20,7 +20,7 @@ public class AgendaController implements AgendaControllerAPI
     {
         try
         {
-            return ResponseEntity.status( HttpStatus.CREATED).body( service.create( session ) );
+            return ResponseEntity.status( HttpStatus.CREATED).body( service.create( agendaDTO ) );
         }
 
         catch ( Exception e )
@@ -62,7 +62,7 @@ public class AgendaController implements AgendaControllerAPI
     {
         try
         {
-            return ResponseEntity.ok().body( service.countAgendaVotes( id ) );
+            return ResponseEntity.ok().body( service.countVotes( id ) );
         }
 
         catch ( Exception e )

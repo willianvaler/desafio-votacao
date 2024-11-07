@@ -33,7 +33,7 @@ public class AssociateController implements AssociateControllerAPI
     {
         try
         {
-            return ResponseEntity.ok().body( associateService.getAssociate( id ) );
+            return ResponseEntity.ok().body( associateService.getById( id ) );
         }
 
         catch ( Exception e )
@@ -47,7 +47,7 @@ public class AssociateController implements AssociateControllerAPI
     {
         try
         {
-            return ResponseEntity.ok().body( associateService.getAssociates() );
+            return ResponseEntity.ok().body( associateService.getAll() );
         }
 
         catch ( Exception e )
