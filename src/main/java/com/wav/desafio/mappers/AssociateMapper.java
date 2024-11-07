@@ -8,4 +8,6 @@ import org.mapstruct.Mapper;
 public interface AssociateMapper
 {
     AssociateDTO associateToAssociateDTO( AssociateEntity associateEntity );
+
+    AssociateEntity associateDTOToAssociateEntity( AssociateDTO associateDTO );
 }

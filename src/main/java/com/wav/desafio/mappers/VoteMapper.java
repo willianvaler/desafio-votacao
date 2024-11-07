@@ -8,4 +8,6 @@ import org.mapstruct.Mapper;
 public interface VoteMapper
 {
     VoteDTO voteToVoteDTO( VoteEntity voteEntity );
+
+    VoteEntity voteDTOToVoteEntity( VoteDTO voteDTO );
 }

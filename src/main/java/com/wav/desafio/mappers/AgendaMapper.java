@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface AgendaMapper
 {
     AgendaDTO agendaToAgendaDTO( AgendaEntity agendaEntity );
+
+    AgendaEntity agendaDTOToAgendaEntity( AgendaDTO agendaDTO );
 }

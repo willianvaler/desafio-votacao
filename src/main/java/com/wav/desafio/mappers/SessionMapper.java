@@ -8,4 +8,6 @@ import org.mapstruct.Mapper;
 public interface SessionMapper
 {
     SessionDTO sessionToSessionDTO( SessionEntity session );
+
+    SessionEntity sessionDTOToSessionEntity( SessionDTO session );
 }

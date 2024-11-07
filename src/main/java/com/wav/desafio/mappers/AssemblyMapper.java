@@ -8,4 +8,6 @@ import org.mapstruct.Mapper;
 public interface AssemblyMapper
 {
     AssemblyDTO assemblyToAssemblyDTO( AssemblyEntity assemblyEntity );
+
+    AssemblyEntity assemblyDTOToAssemblyEntity( AssemblyDTO assemblyDTO );
 }

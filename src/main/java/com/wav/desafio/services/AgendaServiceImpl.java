@@ -24,7 +24,7 @@ public class AgendaServiceImpl implements AgendaService
     @Override
     public AgendaDTO create( AgendaDTO agendaDTO )
     {
-        return null;
+        return agendaMapper.agendaToAgendaDTO( agendaRepository.save( agendaMapper.agendaDTOToAgendaEntity( agendaDTO ) ));
     }
 
     @Override
