@@ -1,7 +1,7 @@
 package com.wav.desafio.api.v1.controllers;
 
 import com.wav.desafio.api.v1.SessionControllerAPI;
-import com.wav.desafio.model.SessionDTO;
+import com.wav.desafio.model.dto.SessionDTO;
 import com.wav.desafio.services.SessionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

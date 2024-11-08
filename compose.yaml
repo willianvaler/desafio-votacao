@@ -1,10 +1,10 @@
 services:
   postgres:
-    container_name: desafio_votacao
-    image: 'postgres:latest'
-    environment:
-      - 'POSTGRES_DB=desafio_votacao'
-      - 'POSTGRES_PASSWORD=admin'
-      - 'POSTGRES_USER=admin'
+    container_name: desafio_votacao_postgres
+    image: postgres
     ports:
-      - '5433'
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=dbdesafiovotacao

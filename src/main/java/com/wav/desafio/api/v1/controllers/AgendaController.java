@@ -1,7 +1,7 @@
 package com.wav.desafio.api.v1.controllers;
 
 import com.wav.desafio.api.v1.AgendaControllerAPI;
-import com.wav.desafio.model.AgendaDTO;
+import com.wav.desafio.model.dto.AgendaDTO;
 import com.wav.desafio.services.AgendaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

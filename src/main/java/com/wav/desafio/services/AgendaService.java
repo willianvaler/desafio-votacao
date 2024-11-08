@@ -1,7 +1,7 @@
 package com.wav.desafio.services;
 
-import com.wav.desafio.model.AgendaDTO;
-import com.wav.desafio.model.VoteResultDTO;
+import com.wav.desafio.model.dto.AgendaDTO;
+import com.wav.desafio.model.dto.VoteResultDTO;
 
 import java.util.List;
 

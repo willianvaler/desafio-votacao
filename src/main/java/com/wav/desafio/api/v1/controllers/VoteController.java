@@ -1,7 +1,7 @@
 package com.wav.desafio.api.v1.controllers;
 
 import com.wav.desafio.api.v1.VoteControllerAPI;
-import com.wav.desafio.model.VoteDTO;
+import com.wav.desafio.model.dto.VoteDTO;
 import com.wav.desafio.services.VoteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

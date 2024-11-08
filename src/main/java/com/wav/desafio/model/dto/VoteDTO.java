@@ -1,4 +1,4 @@
-package com.wav.desafio.model;
+package com.wav.desafio.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,9 +11,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AssemblyDTO
+public class VoteDTO
 {
     private Integer id;
-    private String name;
-    private String description;
+    private boolean vote;
+    private Integer associate_id;
+    private Integer session_id;
 }

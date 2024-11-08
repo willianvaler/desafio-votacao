@@ -1,7 +1,7 @@
 package com.wav.desafio.api.v1.controllers;
 
 import com.wav.desafio.api.v1.AssociateControllerAPI;
-import com.wav.desafio.model.AssociateDTO;
+import com.wav.desafio.model.dto.AssociateDTO;
 import com.wav.desafio.services.AssociateService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

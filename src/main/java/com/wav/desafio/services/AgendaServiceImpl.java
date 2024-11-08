@@ -1,10 +1,10 @@
 package com.wav.desafio.services;
 
 import com.wav.desafio.entities.AgendaEntity;
-import com.wav.desafio.exceptions.NotFoundException;
+import com.wav.desafio.exceptions.AgendaNotFoundException;
 import com.wav.desafio.mappers.AgendaMapper;
-import com.wav.desafio.model.AgendaDTO;
-import com.wav.desafio.model.VoteResultDTO;
+import com.wav.desafio.model.dto.AgendaDTO;
+import com.wav.desafio.model.dto.VoteResultDTO;
 import com.wav.desafio.repositories.AgendaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Primary;
@@ -38,7 +38,7 @@ public class AgendaServiceImpl implements AgendaService
     {
         return Optional.ofNullable( agendaMapper.agendaToAgendaDTO( agendaRepository.findById( id )
                                                 .orElse( null ) ) )
-                                    .orElseThrow( () -> new RuntimeException( "A pauta em questão não foi encontrada." ) );
+                                    .orElseThrow( AgendaNotFoundException::new );
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.wav.desafio.model;
+package com.wav.desafio.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

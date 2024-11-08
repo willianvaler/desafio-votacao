@@ -1,6 +1,6 @@
 package com.wav.desafio.services;
 
-import com.wav.desafio.model.AssociateDTO;
+import com.wav.desafio.model.dto.AssociateDTO;
 
 import java.util.List;
 

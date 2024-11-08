@@ -1,6 +1,6 @@
 package com.wav.desafio.api.v1;
 
-import com.wav.desafio.model.VoteDTO;
+import com.wav.desafio.model.dto.VoteDTO;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

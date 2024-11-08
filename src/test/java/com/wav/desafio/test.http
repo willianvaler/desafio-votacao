@@ -1,0 +1,21 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+GET http://localhost:8080/api/v1/agenda/
+
+###
+POST http://localhost:8080/api/v1/agenda/create
+
+###
+POST http://localhost:8080/api/v1/agenda/create
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name":"teste",
+    "description":"teste"
+}
+
+###

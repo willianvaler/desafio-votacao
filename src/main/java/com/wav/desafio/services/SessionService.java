@@ -1,6 +1,6 @@
 package com.wav.desafio.services;
 
-import com.wav.desafio.model.SessionDTO;
+import com.wav.desafio.model.dto.SessionDTO;
 
 import java.util.List;
 

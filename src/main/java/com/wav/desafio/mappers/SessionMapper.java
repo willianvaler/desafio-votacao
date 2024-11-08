@@ -1,7 +1,7 @@
 package com.wav.desafio.mappers;
 
 import com.wav.desafio.entities.SessionEntity;
-import com.wav.desafio.model.SessionDTO;
+import com.wav.desafio.model.dto.SessionDTO;
 import org.mapstruct.Mapper;
 
 @Mapper

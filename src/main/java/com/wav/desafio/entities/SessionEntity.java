@@ -40,7 +40,7 @@ public class SessionEntity
     private AgendaEntity agendaEntity;
 
     @Column( name = "agenda_id", nullable = false, insertable = false, updatable = false )
-    private Integer agenda_id;
+    private Integer agendaId;
 
     @Column( columnDefinition = "integer default 1")
     private Integer duration; //in minutes

@@ -36,11 +36,4 @@ public class AgendaEntity
     @NotBlank(message = "the field name must not be empty or null")
     private String name;
     private String description;
-
-    @ManyToOne()
-    @Column( name = "assembly_id", nullable = false, insertable = false, updatable = false )
-    private AssemblyEntity assemblyEntity;
-
-    @Column( name = "assembly_id", nullable = false, insertable = false, updatable = false )
-    private Integer assembly_id;
 }

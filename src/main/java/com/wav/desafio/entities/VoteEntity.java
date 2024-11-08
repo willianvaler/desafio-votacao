@@ -36,10 +36,10 @@ public class VoteEntity
     private boolean vote;
 
     @Column( name = "associate_id", nullable = false, insertable = false, updatable = false )
-    private Integer associate_id;
+    private Integer associateId;
 
     @Column( name = "session_id", nullable = false, insertable = false, updatable = false )
-    private Integer session_id;
+    private Integer sessionId;
 
     @ManyToOne
     @JoinColumn(name = "associate_id", insertable = false, updatable = false)

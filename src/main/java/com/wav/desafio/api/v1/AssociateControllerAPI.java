@@ -1,7 +1,8 @@
 package com.wav.desafio.api.v1;
 
-import com.wav.desafio.model.AssociateDTO;
+import com.wav.desafio.model.dto.AssociateDTO;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,9 +12,9 @@ public interface AssociateControllerAPI
     @PostMapping( "/create" )
     public ResponseEntity<Object> create( AssociateDTO associateDTO );
 
-    @PostMapping( "/{associateId}" )
+    @GetMapping( "/{associateId}" )
     public ResponseEntity<Object> getAssociate( Integer id );
 
-    @PostMapping( "/" )
+    @GetMapping( "/" )
     public ResponseEntity<Object> getAssociates();
 }
